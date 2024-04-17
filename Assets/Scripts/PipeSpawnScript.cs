@@ -5,14 +5,14 @@ using UnityEngine;
 public class PipeSpawnScript : MonoBehaviour
 {
     public GameObject pipe;
-    public float spawnRate = 1;
+    public float spawnRate = 10;
     private float timer = 0;
     private float heightOffset = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnPipe();
+        SpawnPipe();
     }
 
     // Update is called once per frame
@@ -24,12 +24,12 @@ public class PipeSpawnScript : MonoBehaviour
         }
         else
         {
-            spawnPipe();
+            SpawnPipe();
             timer = 0;
         }
     }
 
-    void spawnPipe()
+    void SpawnPipe()
     {
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
