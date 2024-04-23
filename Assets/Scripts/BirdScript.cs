@@ -6,6 +6,7 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logicScript;
     public bool isAlive = true;
+    public AudioSource wingAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -18,19 +19,26 @@ public class BirdScript : MonoBehaviour
     {
         if (isAlive && Input.GetKeyDown(KeyCode.Space) == true)
         {
+            wingAudioSource.Play();
             myRigidBody.velocity = Vector2.up * flapStrength;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logicScript.GameOver();
-        isAlive = false;
+        if (isAlive)
+        {
+            logicScript.GameOver();
+            isAlive = false;
+        }
     }
 
     private void OnBecameInvisible()
     {
-        logicScript.GameOver();
-        isAlive = false;
+        if (isAlive)
+        {
+            logicScript.GameOver();
+            isAlive = false;
+        }
     }
 }
