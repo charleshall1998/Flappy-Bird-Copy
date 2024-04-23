@@ -27,4 +27,10 @@ public class BirdScript : MonoBehaviour
         logicScript.GameOver();
         isAlive = false;
     }
+
+    private void OnBecameInvisible()
+    {
+        logicScript.GameOver();
+        isAlive = false;
+    }
 }
