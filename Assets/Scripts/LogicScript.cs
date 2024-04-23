@@ -1,11 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
 {
     public int score = 0;
     public Text scoreText;
+    public GameObject gameOverScreen;
 
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreToAdd)
@@ -17,5 +18,10 @@ public class LogicScript : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    } 
+    }
+
+    public void GameOver()
+    {
+        gameOverScreen.SetActive(true);
+    }
 }

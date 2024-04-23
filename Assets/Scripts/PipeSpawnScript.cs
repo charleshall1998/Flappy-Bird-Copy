@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeSpawnScript : MonoBehaviour
@@ -18,7 +16,7 @@ public class PipeSpawnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer < spawnRate)
+        if (timer < spawnRate)
         {
             timer += Time.deltaTime;
         }
