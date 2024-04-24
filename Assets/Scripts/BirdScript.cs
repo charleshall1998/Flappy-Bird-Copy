@@ -28,7 +28,7 @@ public class BirdScript : MonoBehaviour
     {
         if (isAlive)
         {
-            logicScript.GameOver();
+            logicScript.EndGame();
             isAlive = false;
         }
     }
@@ -37,7 +37,7 @@ public class BirdScript : MonoBehaviour
     {
         if (isAlive)
         {
-            logicScript.GameOver();
+            logicScript.EndGame();
             isAlive = false;
         }
     }

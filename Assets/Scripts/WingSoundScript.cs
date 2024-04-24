@@ -15,9 +15,4 @@ public class WingSoundScript : MonoBehaviour
     {
 
     }
-
-    public void PlaySound()
-    {
-        audioSource.Play();
-    }
 }

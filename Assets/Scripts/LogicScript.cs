@@ -23,7 +23,7 @@ public class LogicScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void GameOver()
+    public void EndGame()
     {
         gameOverScreen.SetActive(true);
         gameOverAudioSource.Play();
